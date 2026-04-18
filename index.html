@@ -1,34 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>முதல் திருவிருந்து - C. Cecil Antony Heartson</title>
+    <!-- Premium Google Fonts for English and Tamil -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Tiro+Tamil:ital@0;1&family=Mukta+Malar:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Tiro+Tamil:ital@0;1&family=Mukta+Malar:wght@400;600;700&family=Kavivanar&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Mukta Malar', sans-serif;
+        }
+
+        .main-title {
+            font-family: 'Kavivanar', cursive;
+            font-size: 3.8rem;
+            text-transform: none;
+            letter-spacing: 0;
+            font-weight: normal;
+        }
+
+        .pre-title {
+            font-family: 'Mukta Malar', sans-serif;
+            font-weight: bold;
+        }
+
+        .name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        /* Keep boy's name in English */
+        .quote-text {
+            font-family: 'Mukta Malar', sans-serif;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            font-style: normal;
+        }
+
+        .quote-source {
+            font-family: 'Mukta Malar', sans-serif;
+        }
+
+        .action {
+            font-family: 'Mukta Malar', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .wishes-title {
+            font-family: 'Tiro Tamil', serif;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .family-group h4 {
+            font-family: 'Mukta Malar', sans-serif;
+            font-weight: bold;
+        }
+
+        .btn,
+        .response-message,
+        .helper-text,
+        .blessing {
+            font-family: 'Mukta Malar', sans-serif;
+        }
+
+        .blessing {
+            font-family: 'Kavivanar', cursive;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.8rem;
+                line-height: 1.3;
+            }
+            .name {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div id="parallax-bg" class="background-container"></div>
     <div class="overlay"></div>
 
-    <!-- Fireflies Container -->
+    <!-- Fireflies/Holy Aura Container -->
     <div id="fireflies-container"></div>
 
     <!-- Interactive Gateway Cover -->
     <div id="gateway" class="gateway">
         <div class="door door-left"></div>
         <div class="door door-right"></div>
-        
+
         <div class="seal-container" id="openBtn">
             <div class="glow"></div>
             <div class="wax-seal">
                 <span class="cross">&#10013;</span>
                 <span class="tap-text" style="font-family: 'Mukta Malar', sans-serif;">திறக்க<br>அழுத்தவும்</span>
             </div>
-            <p class="helper-text ripple-text" style="font-family: 'Mukta Malar', sans-serif;">அழைப்பிதழைக் காண முத்திரையைத் தொடவும்</p>
+            <p class="helper-text ripple-text">அழைப்பிதழைக் காண முத்திரையைத் தொடவும்</p>
         </div>
     </div>
 
@@ -39,54 +121,71 @@
         <!-- Cover Section -->
         <section class="section cover fade-in tilt-element">
             <div class="glass-panel" data-depth="0.1">
-                <h2 class="pre-title" style="font-family: 'Mukta Malar', sans-serif;">அழைப்பிதழ்</h2>
-                <h1 class="main-title" style="font-family: 'Tiro Tamil', serif; font-size: 3.5rem;">முதல் திருவிருந்து</h1>
-                <div class="divider"></div>
+                <h2 class="pre-title">அழைப்பிதழ்</h2>
+                <h1 class="main-title">முதல் திருவிருந்து</h1>
+                <div class="chalice-art">
+                    <div class="chalice-glow"></div>
+                    <img src="chalice.png" class="chalice-icon" alt="Holy Chalice" width="180"
+                        style="position: relative; z-index: 2; mix-blend-mode: multiply; filter: drop-shadow(0 5px 15px rgba(218,165,32,0.5)); border-radius: 10px;">
+                </div>
             </div>
         </section>
 
         <!-- Quote Section -->
         <section class="section quote fade-in tilt-element">
             <div class="glass-panel" data-depth="0.2">
-                <p class="quote-text" id="typewriter-quote" data-text='“ஜீவ அப்பம் நானே, என்னிடத்தில் வருகிறவன் ஒருக்காலும் பசியடையான், என்னிடத் தில் விசுவாசமாயிருக்கிறவன் ஒருக்காலும் தாகமடையான்.”' style="font-family: 'Mukta Malar', sans-serif; font-size: 1.2rem; line-height: 1.6;"></p>
-                <p class="quote-source fade-in-delayed" style="font-family: 'Mukta Malar', sans-serif; font-size: 1.1rem; font-weight: 600;">— யோவான் 6:35</p>
+                <p class="quote-text" id="typewriter-quote"
+                    data-text='“வாழ்வு தரும் உணவு நானே. என்னிடம் வருபவருக்குப் பசியே இராது; என்னிடம் நம்பிக்கை கொண்டிருப்பவருக்கு என்றுமே தாகம் இராது".'>
+                </p>
+                <p class="quote-source fade-in-delayed">— யோவான் நற்செய்தி 6:35</p>
             </div>
         </section>
 
         <!-- Main Invitiation -->
         <section class="section main-invite">
             <div class="glass-panel fade-in tilt-element" data-depth="0.15">
-                <p class="intro" style="font-family: 'Mukta Malar', sans-serif; font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 600;">மிகுந்த மகிழ்ச்சியுடன் எங்கள் மகன்</p>
-                
-                <h2 class="name" style="font-family: 'Cinzel', serif;">C. Cecil Antony Heartson</h2>
-                <p class="parents" style="font-family: 'Mukta Malar', sans-serif; margin-top: 0.5rem; color: var(--text-dark); font-style: normal; font-weight: 600;">பெற்றோர்கள் : C. Valerian Gracias Cyril & R. Infant Mychiline Priya</p>
+                <p class="intro"
+                    style="font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem; color: var(--primary-color);">
+                    மிகுந்த மகிழ்ச்சியுடன் எங்கள் மகன்</p>
 
-                <p class="action" style="font-family: 'Mukta Malar', sans-serif; font-size: 1.1rem; margin-top: 1.5rem; line-height: 1.5; font-weight: 600;">முதல் திருவிருந்தை பெறும் புனித நிகழ்விற்க்கு<br>தங்களையும் தங்கள் குடும்பத்தினரையும் அன்புடன் அழைக்கிறோம்.</p>
-                
+                <h2 class="name">C. Cecil Antony Heartson</h2>
+
+                <p class="action">முதல் திருவிருந்தை பெறும் புனித நிகழ்வுக்கு<br>தங்களையும் தங்கள் குடும்பத்தினரையும்
+                    அன்புடன் அழைக்கிறோம்.</p>
+                <p class="parents"
+                    style="font-weight: 600; color: var(--text-dark); margin-top: 1rem; font-style: normal;">பெற்றோர்கள்
+                    : C. Valerian Gracias Cyril & R. Infant Mychiline Priya</p>
+
                 <div class="church-details box-panel tilt-inner fade-in">
                     <div class="panel-icon">&#9962;</div>
-                    <p class="church-name" style="font-family: 'Mukta Malar', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">📍 இடம்</p>
-                    <p class="address" style="font-family: 'Mukta Malar', sans-serif; font-weight: 600; font-size: 1.1rem;">வேளாங்கண்ணி ஆரோக்கிய அன்னை ஆலயம்<br>ரத்தினம் நகர், சேரன் மா நகர்<br>கோயம்புத்தூர் – 641048</p>
-                    
-                    <div class="date-time" style="font-family: 'Mukta Malar', sans-serif; font-weight: 600; margin-top: 1rem; font-size: 1.1rem;">
+                    <p class="church-name" style="font-family: 'Mukta Malar', sans-serif; font-size: 1.3rem;">📍 இடம்
+                    </p>
+                    <p class="address" style="font-size: 1.15rem; font-weight: 600;">வேளாங்கண்ணி ஆரோக்கிய அன்னை
+                        ஆலயம்<br>ரத்தினம் நகர், சேரன் மா நகர்<br>கோயம்புத்தூர் – 641048</p>
+
+                    <div class="date-time" style="font-size: 1.1rem; margin-top: 1.5rem;">
                         <p class="date"><strong>📅 தேதி :</strong> ஞாயிறு, 3 மே 2026</p>
                         <p class="time"><strong>⏰ நேரம் :</strong> காலை 11:00</p>
                     </div>
                 </div>
-                
+
                 <div class="reception-details box-panel tilt-inner fade-in">
                     <div class="panel-icon">&#127863;</div>
-                    <p class="reception-title" style="font-family: 'Mukta Malar', sans-serif; font-weight: 600; font-size: 1.1rem;">விருந்து நடைபெறும் இடம்</p>
+                    <p class="reception-title"
+                        style="font-family: 'Mukta Malar', sans-serif; font-weight: bold; font-size: 1.3rem;">விருந்து
+                        நடைபெறும் இடம்</p>
                     <p class="venue-name" style="font-family: 'Cinzel', serif;">Zone Connect</p>
-                    <p class="address" style="font-family: 'Mukta Malar', sans-serif; font-weight: 600; font-size: 1.1rem;">39, கலப்பட்டி மெயின் ரோடு,<br>கோயம்புத்தூர் – 641048</p>
+                    <p class="address" style="font-size: 1.15rem; font-weight: 600;">39, கலப்பட்டி மெயின்
+                        ரோடு,<br>கோயம்புத்தூர் – 641048</p>
                 </div>
 
                 <!-- Interactive Utility Buttons -->
                 <div class="action-buttons fade-in tilt-inner">
-                    <a href="#" class="btn btn-utility interactive-btn" id="addToCalBtn" style="font-family: 'Mukta Malar', sans-serif;">
+                    <a href="#" class="btn btn-utility interactive-btn" id="addToCalBtn">
                         <span class="btn-icon">&#128197;</span> நாட்காட்டியில் சேர்க்க
                     </a>
-                    <a href="https://maps.google.com/?q=Zone+Connect+39+Kalapatti+Main+Road+Coimbatore" target="_blank" class="btn btn-utility interactive-btn" style="font-family: 'Mukta Malar', sans-serif;">
+                    <a href="https://maps.google.com/?q=Zone+Connect+39+Kalapatti+Main+Road+Coimbatore" target="_blank"
+                        class="btn btn-utility interactive-btn">
                         <span class="btn-icon">&#128205;</span> வழித்தடம்
                     </a>
                 </div>
@@ -96,27 +195,27 @@
         <!-- Wishes & Prayers -->
         <section class="section wishes fade-in tilt-element">
             <div class="glass-panel" data-depth="0.05">
-                <h2 class="wishes-title" style="font-family: 'Tiro Tamil', serif; font-size: 2.2rem;">அன்பான வாழ்த்துக்கள்</h2>
-                
-                <div class="family-grid" style="font-family: 'Mukta Malar', sans-serif;">
+                <h2 class="wishes-title">வாழ்த்துகள்</h2>
+
+                <div class="family-grid">
                     <div class="family-group interactive-hover">
-                        <h4 style="font-size: 1.1rem; font-weight: 700;">ஞானப் பெற்றோர்கள்</h4>
-                        <p style="font-weight: 600;">D.A.A.P Chandran<br>I. Josephine Maria Assunta</p>
+                        <h4>ஞானப் பெற்றோர்கள்</h4>
+                        <p>D.A.A.P Chandran<br>I. Josephine Maria Assunta</p>
                     </div>
-                    
+
                     <div class="family-group interactive-hover">
-                        <h4 style="font-size: 1.1rem; font-weight: 700;">தாத்தா பாட்டி</h4>
-                        <p style="font-weight: 600;">I. Roch Vincent Raj<br>R. Sahaya Hevilda Angel</p>
+                        <h4>தாத்தா அம்மாச்சி</h4>
+                        <p>I. Roch Vincent Raj<br>R. Sahaya Hevilda Angel</p>
                     </div>
-                    
+
                     <div class="family-group interactive-hover">
-                        <h4 style="font-size: 1.1rem; font-weight: 700;">தாய்மாமன் மற்றும் அத்தை</h4>
-                        <p style="font-weight: 600;">R. Gerald Antony Kirubagar<br>S. Jenet Jeinema</p>
+                        <h4>தாய்மாமன் அத்தை</h4>
+                        <p>R. Gerald Antony Kirubagar<br>S. Jenet Jemema</p>
                     </div>
-                    
+
                     <div class="family-group interactive-hover">
-                        <h4 style="font-size: 1.1rem; font-weight: 700;">காவல் தேவதை</h4>
-                        <p style="font-weight: 600;">C. Cecil Antony Dhanraj</p>
+                        <h4>காவல் தூதன்</h4>
+                        <p>C. Cecil Antony Dhanraj</p>
                     </div>
                 </div>
             </div>
@@ -125,15 +224,15 @@
         <!-- Interactive RSVP Section -->
         <section class="section rsvp fade-in tilt-element">
             <div class="glass-panel" data-depth="0.2">
-                <p class="blessing" style="font-family: 'Tiro Tamil', serif; font-size: 1.5rem; color: var(--primary-color);">இந்நாளை உங்கள் வருகையும் ஜெபங்களும் மேலும் ஆசீர்வதிக்கட்டும்.</p>
-                
+                <p class="blessing">இந்நாளை உங்கள் வருகையும் ஜெபங்களும் மேலும் ஆசீர்வதிக்கட்டும்.</p>
+
                 <div class="rsvp-buttons" id="rsvpContainer" style="margin-top: 2rem;">
-                    <button class="btn btn-primary interactive-btn" id="btnAccept" style="font-family: 'Mukta Malar', sans-serif;">மகிழ்ச்சியுடன் வருகிறோம்</button>
-                    <button class="btn btn-secondary interactive-btn" id="btnDecline" style="font-family: 'Mukta Malar', sans-serif;">கலந்து கொள்ள இயலாது</button>
+                    <button class="btn btn-primary interactive-btn" id="btnAccept">மகிழ்ச்சியுடன் வருகிறோம்</button>
+                    <button class="btn btn-secondary interactive-btn" id="btnDecline">கலந்து கொள்ள இயலாது</button>
                 </div>
-                
+
                 <div id="rsvpResponse" class="rsvp-response hidden">
-                    <p class="response-message" id="responseMsg"></p>
+                    <p class="response-message" id="responseMsg" style="font-weight: bold;"></p>
                     <div class="cross-icon glow-effect">&#10013;</div>
                 </div>
             </div>
@@ -141,6 +240,35 @@
         </section>
     </main>
 
+    <!-- AI Event Assistant Widget (Optional / Kept for fun) -->
+    <div id="ai-assistant-widget">
+        <div id="ai-chat-window" class="hidden">
+            <div class="ai-chat-header">
+                <span class="ai-bot-icon">✨</span>
+                <span class="ai-header-title">உதவியாளர்</span>
+                <button id="closeAiChat">&times;</button>
+            </div>
+            <div class="ai-chat-body" id="aiChatBody" style="font-family: 'Mukta Malar', sans-serif;">
+                <div class="ai-msg bot">
+                    வணக்கம்! நான் உங்கள் மெய்நிகர் வழிகாட்டி. நிகழ்வு குறித்த ஏதேனும் விவரங்கள் வேண்டுமா? 🤍
+                </div>
+                <div class="ai-suggestions">
+                    <button class="ai-chip" onclick="askAI('நிகழ்வு எப்போது?')">எப்போது?</button>
+                    <button class="ai-chip" onclick="askAI('ஆலயம் எங்கே?')">ஆலயம் எங்கே?</button>
+                    <button class="ai-chip" onclick="askAI('விருந்து எங்கே?')">விருந்து எங்கே?</button>
+                </div>
+            </div>
+            <div class="ai-chat-input">
+                <input type="text" id="aiInputText" placeholder="கேள்வியை உள்ளிடவும்..." autocomplete="off">
+                <button id="aiSendBtn">&#10148;</button>
+            </div>
+        </div>
+        <button id="ai-bot-trigger" class="pulse-effect">
+            <span class="bot-icon">✨</span> கேளுங்கள்
+        </button>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
