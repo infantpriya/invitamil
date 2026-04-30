@@ -182,20 +182,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const rsvpResponse = document.getElementById('rsvpResponse');
     const responseMsg = document.getElementById('responseMsg');
 
-    if (btnAccept && btnDecline) {
+    if (btnAccept) {
         btnAccept.addEventListener('click', (e) => {
             createBurst(e.clientX, e.clientY, 20);
-            rsvpContainer.style.display = 'none';
-            responseMsg.innerHTML = "மிக்க நன்றி! உங்கள் வருகையை ஆவலுடன் எதிர்பார்க்கிறோம். ✨";
-            responseMsg.style.color = "#8b0000";
-            rsvpResponse.classList.remove('hidden');
+            if(rsvpContainer) rsvpContainer.style.display = 'none';
+            if(responseMsg) {
+                responseMsg.innerHTML = "மிக்க நன்றி! உங்கள் வருகையை ஆவலுடன் எதிர்பார்க்கிறோம். ✨";
+                responseMsg.style.color = "#8b0000";
+            }
+            if(rsvpResponse) rsvpResponse.classList.remove('hidden');
         });
+    }
 
+    if (btnDecline) {
         btnDecline.addEventListener('click', () => {
-            rsvpContainer.style.display = 'none';
-            responseMsg.innerHTML = "நீங்கள் வர இயலாதது வருத்தமே. உங்கள் ஜெபங்களுக்கு நன்றி. 🙏";
-            responseMsg.style.color = "#5c4e40";
-            rsvpResponse.classList.remove('hidden');
+            if(rsvpContainer) rsvpContainer.style.display = 'none';
+            if(responseMsg) {
+                responseMsg.innerHTML = "நீங்கள் வர இயலாதது வருத்தமே. உங்கள் ஜெபங்களுக்கு நன்றி. 🙏";
+                responseMsg.style.color = "#5c4e40";
+            }
+            if(rsvpResponse) rsvpResponse.classList.remove('hidden');
         });
     }
 
